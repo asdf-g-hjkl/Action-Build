@@ -503,13 +503,14 @@ jobs:
 
           # fb*
           echo "CONFIG_FB=y" >> "$CONFIG_FILE"
-          echo "CONFIG_FB_CORE=y" >> "$CONFIG_FILE"
+          echo "CONFIG_FB_MSM=y" >> "$CONFIG_FILE"*
           echo "CONFIG_FB_DEVICE=y" >> "$CONFIG_FILE"
           echo "CONFIG_DRM_FBDEV_EMULATION=y" >> "$CONFIG_FILE"
+          echo "CONFIG_FB_SIMPLE=y" >> "$CONFIG_FILE"
           #echo "CONFIG_FRAMEBUFFER_CONSOLE=y" >> "$CONFIG_FILE"*
           #echo "CONFIG_FRAMEBUFFER_CONSOLE_DETECT_PRIMARY=y" >> "$CONFIG_FILE"*
           #echo "CONFIG_FRAMEBUFFER_CONSOLE_DEFERRED_TAKEOVER=y" >> "$CONFIG_FILE"*
-          #echo "CONFIG_LOGO=y" >> "$CONFIG_FILE"*
+          echo "CONFIG_LOGO=y" >> "$CONFIG_FILE"*
 
           # ZRAM配置*
           if [ "${{ github.event.inputs.ZRAM }}" = "true" ]; then
